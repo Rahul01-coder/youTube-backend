@@ -1,0 +1,12 @@
+{
+  "name": "youtube-backend",
+  "version": "1.0.0",
+  "description": "production ready youtube backend project",
+  "license": "ISC",
+  "author": "Rahul kumawat",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
