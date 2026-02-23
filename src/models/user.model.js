@@ -48,11 +48,10 @@ const userSchema = new Schema({
 
 
 // pre hook , when data save then before save data this hook and callback function run
-userSchema.pre("save",async function (next) {
-    if(!this.isModified("password"))  return next() // if password field not modified then it directly retun outside function
+userSchema.pre("save",async function () {
+    if(!this.isModified("password"))  return // if password field not modified then it directly return outside function
 
     this.password = await bcrypt.hash(this.password,10)   //encrypt the password
-    next()
 })
 
 userSchema.methods.isPasswordCorrct = async function (password){
